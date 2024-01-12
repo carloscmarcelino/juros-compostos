@@ -19,10 +19,10 @@ export const HomeScreen = () => {
   } = useForm<FormType>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      initialValue: 'R$ 25.000,00',
-      monthlyValue: 'R$ 1.500,00',
-      interestRate: '11%',
-      period: '7',
+      initialValue: '',
+      monthlyValue: '',
+      interestRate: '',
+      period: '',
 
       totalValue: '',
       totalInvested: '',
