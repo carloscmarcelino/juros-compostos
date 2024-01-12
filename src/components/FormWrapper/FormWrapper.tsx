@@ -4,6 +4,7 @@ import {
   FormControlProps,
   FormErrorMessage,
   FormLabel,
+  Text,
 } from '@chakra-ui/react';
 import React from 'react';
 
@@ -14,7 +15,7 @@ type FormWrapperProps = {
 } & FormControlProps;
 
 export const FormWrapper = ({ label, children, error, ...rest }: FormWrapperProps) => (
-  <FormControl position="relative" {...rest}>
+  <FormControl {...rest}>
     <FormLabel fontWeight="bold" color="black">
       {label}
     </FormLabel>
@@ -22,9 +23,9 @@ export const FormWrapper = ({ label, children, error, ...rest }: FormWrapperProp
     {children}
 
     <Collapse in={Boolean(error)} animateOpacity>
-      <FormErrorMessage fontSize="1rem" color="error">
+      <Text fontSize="0.875rem" color="red">
         *{error?.message}
-      </FormErrorMessage>
+      </Text>
     </Collapse>
   </FormControl>
 );

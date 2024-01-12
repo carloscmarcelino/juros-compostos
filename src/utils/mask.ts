@@ -52,6 +52,10 @@ export const Mask = {
       currency: 'BRL',
     });
   },
-  rate: (value: string, maskType: MaskType = 'numbers') => applyMask(value, '**%', maskType),
-  period: (value: string, maskType: MaskType = 'numbers') => applyMask(value, '***', maskType),
+  rate: (value: string, maskType: MaskType = 'numbers') => {
+    const formattedValue = applyMask(value, '**%', maskType);
+
+    return formattedValue.endsWith('%') ? formattedValue : formattedValue + '%';
+  },
+  period: (value: string, maskType: MaskType = 'numbers') => applyMask(value, '** anos', maskType),
 };
