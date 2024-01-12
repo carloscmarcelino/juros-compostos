@@ -79,11 +79,11 @@ export const HomeScreen = () => {
             <CustomInput register={register('monthlyValue')} mask={Mask.formatBRL} />
           </FormWrapper>
 
-          <FormWrapper label="Taxa de juros" error={errors?.interestRate}>
+          <FormWrapper label="Taxa de juros (ano)" error={errors?.interestRate}>
             <CustomInput register={register('interestRate')} mask={Mask.rate} />
           </FormWrapper>
 
-          <FormWrapper label="Período em" error={errors?.period}>
+          <FormWrapper label="Período (ano)" error={errors?.period}>
             <CustomInput register={register('period')} mask={Mask.period} />
           </FormWrapper>
         </Flex>
