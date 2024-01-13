@@ -1,17 +1,11 @@
-import {
-  Collapse,
-  FormControl,
-  FormControlProps,
-  FormErrorMessage,
-  FormLabel,
-  Text,
-} from '@chakra-ui/react';
+import { Collapse, FormControl, FormControlProps, FormLabel, Text } from '@chakra-ui/react';
 import React from 'react';
+import { FieldError } from 'react-hook-form';
 
 type FormWrapperProps = {
   label: string;
   children: JSX.Element;
-  error?;
+  error?: FieldError;
 } & FormControlProps;
 
 export const FormWrapper = ({ label, children, error, ...rest }: FormWrapperProps) => (

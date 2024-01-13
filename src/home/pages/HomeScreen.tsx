@@ -1,14 +1,10 @@
-import { Box, Button, Flex, Text } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-import { FormWrapper } from '@/components';
-import { CustomInput } from '@/components/CustomInput';
-import { Mask, brlToNumber, toBRL } from '@/utils';
-
-import { FormType, formSchema } from '../validators/formSchema';
 import { CalculatorForm, CalculatorInfo } from '../components';
+import { FormType, formSchema } from '../validators/formSchema';
 
 export const HomeScreen = () => {
   const {

@@ -1,16 +1,16 @@
-import { FormWrapper } from '@/components';
-import { CustomInput } from '@/components/CustomInput';
-import { FormType } from '@/home/validators/formSchema';
-import { Mask, brlToNumber, toBRL } from '@/utils';
 import { Button, Flex, Text } from '@chakra-ui/react';
 import React from 'react';
-
 import {
   UseFormSetValue,
   UseFormHandleSubmit,
   FieldErrors,
   UseFormRegister,
 } from 'react-hook-form';
+
+import { FormWrapper } from '@/components';
+import { CustomInput } from '@/components/CustomInput';
+import { FormType } from '@/home/validators/formSchema';
+import { Mask, brlToNumber, toBRL } from '@/utils';
 
 type CalculatorFormPorps = {
   setValue: UseFormSetValue<FormType>;
