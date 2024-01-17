@@ -57,5 +57,5 @@ export const Mask = {
 
     return formattedValue.endsWith('%') ? formattedValue : formattedValue + '%';
   },
-  period: (value: string, maskType: MaskType = 'numbers') => applyMask(value, '** anos', maskType),
+  period: (value: string, maskType: MaskType = 'numbers') => applyMask(value, '**', maskType),
 };
